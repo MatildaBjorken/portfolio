@@ -1,0 +1,279 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: 'Asset', cursive;
+ 
+}
+
+nav {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	text-transform: uppercase;
+  }
+  
+  .brand-logo{
+	margin: 1em;
+	display: inline-block;
+  }
+  
+
+  .menu-item {
+	flex: 1;
+  }
+  
+  .menu-center  {
+	font-size: 1.1rem;
+  
+	filter: blur(1px);
+	-webkit-filter: blur(1px);
+	margin: 1em;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	text-align: center;
+  }
+  .menu-center a {
+	color: gray;
+   text-decoration: none;
+  }
+  
+  .menu-center a:hover {
+	color: rgb(50, 50, 50);
+  }
+
+img{
+    width: 100%;
+}
+
+
+
+/*grid images portfolio*/
+
+.portfolioImage {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr;
+	margin-left: 10em;
+	margin-right: 10em;
+
+	grid-gap: 3em;
+}
+
+@media screen and (max-width: 800px) {
+	.portfolioImage {
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr;
+		margin: 3em;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.portfolioImage {
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr;
+		margin-top: 3em;
+		margin: 1em;
+	}
+}
+
+
+/* end grid images portfolio*/
+
+.candidate a {
+	text-decoration: none;
+}
+
+.candidate:active img,
+.candidate:hover img {
+	-webkit-filter: blur(3px);
+	filter: blur(3px);
+	-webkit-transform: scale(1.15);
+	/* Safari and Chrome */
+	-moz-transform: scale(1.15);
+	/* Firefox */
+	-ms-transform: scale(1.15);
+	/* IE 9 */
+	-o-transform: scale(1.15);
+	/* Opera */
+	transform: scale(1.15);
+}
+
+.candidate img {
+	-webkit-transition: all .5s ease;
+	/* Safari and Chrome */
+	-moz-transition: all .5s ease;
+	/* Firefox */
+	-o-transition: all .5s ease;
+	/* IE 9 */
+	-ms-transition: all .5s ease;
+	/* Opera */
+	transition: all .5s ease;
+}
+
+.candidate-image {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+
+
+/* text hidden */
+
+
+
+
+/* text shown on hover */
+
+.candidate:active .candidate-image-text,
+.candidate:hover .candidate-image-text {
+	opacity: 1;
+	-webkit-transition: all 1.5s ease;
+	/* Safari and Chrome */
+	-moz-transition: all 1.5s ease;
+	/* Firefox */
+	-o-transition: all 1.5s ease;
+	/* IE 9 */
+	-ms-transition: all 1.5s ease;
+	/* Opera */
+	transition: all 1.5s ease;
+}
+
+.candidate-name {
+	color: #ffffff;
+	text-align: center;
+	top: 50%;
+	left: 50%;
+	border: 2px solid #fff;
+	padding: .5em;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	text-align: center;
+	font-size: 1rem;
+	line-height: 1.2em;
+	z-index: 10;
+	position: absolute;
+	opacity: 0;
+}
+
+
+/* text shown on hover */
+
+.candidate:active .candidate-name,
+.candidate:hover .candidate-name {
+	opacity: 1;
+	-webkit-transition: all 1.5s ease;
+	/* Safari and Chrome */
+	-moz-transition: all 1.5s ease;
+	/* Firefox */
+	-o-transition: all 1.5s ease;
+	/* IE 9 */
+	-ms-transition: all 1.5s ease;
+	/* Opera */
+	transition: all 1.5s ease;
+}
+
+.candidate-name:hover {
+	background-color:  gray;
+	transition: all 15s ease;
+}
+
+@media screen and (max-width: 800px) {
+	.candidate-image-text {
+		font-size: 1rem;
+	}
+	.candidate-name {
+		font-size: .8rem;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.candidate-image-text {
+		font-size: .8rem;
+	}
+	.candidate-name {
+		font-size: .5rem;
+	}
+}
+
+
+.header{
+	margin-top: 2em;
+	margin-bottom: 2em;
+	text-align: center;
+}
+.header h2 a{
+	
+  text-decoration: none;
+	color: rgb(50, 50, 50);
+	font-size: 2.5rem;
+	text-transform: uppercase;
+
+  }
+  
+  .header-1  {
+	
+	filter: blur(1.5px);
+	-webkit-filter: blur(1.5px);
+	display: inline-block;
+	line-height: 1em;
+  }
+  .header-2  {
+  
+	filter: blur(1.5px);
+	-webkit-filter: blur(1.5px);
+	display: inline-block;
+	line-height: 1em;
+  }
+
+
+  /* news ticker*/
+.row .ticker{
+	position: absolute;
+}
+
+ .ticker__viewport {
+	height: auto;
+	font-size: 1.5rem;
+	background: #cacaca;
+	font-family: 'Asset', cursive;
+	color: #fff;
+	overflow: hidden;
+	padding: .5em 0;
+
+margin-bottom: 2em;
+
+	z-index: 990;
+}
+
+.ticker__list {
+	padding: 0;
+	margin: 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.ticker__item {
+	display: inline-block;
+	white-space: nowrap;
+}
+
+
+@media screen and (max-width: 1000px) {
+	.ticker__viewport {
+		margin-left: 2em;
+		margin-right: 2em;
+		font-size: 1.2rem;
+		
+	}
+}
+
+
+
+/* end news ticker*/
